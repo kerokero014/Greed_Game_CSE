@@ -12,9 +12,9 @@ namespace Game{
 
         public Color(int red, int green, int blue)
         {
-            int.red = red; 
-            int.green = green;
-            int.blue = blue;
+            this.red = red; 
+            this.green = green;
+            this.blue = blue;
         }
         
         public int GetAlpha(){
