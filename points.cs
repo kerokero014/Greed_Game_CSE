@@ -11,14 +11,14 @@ namespace Game
             this.y = y;
         }
 
-        public Point Add(Point other){
+        public Point Sum(Point other){
             int x = this.x + other.GetX();
             int y = this.y + other.GetY();
 
             return new Point(x, y);
         }
 
-        public bool Equals(Point other){
+        public bool Results(Point other){
             return this.x == other.GetX() && this.y == other.GetY();
         }
 
