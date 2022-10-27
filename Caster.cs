@@ -7,7 +7,7 @@ namespace Game{
         private Dictionary<string, List<Actor>> actors = new Dictionary<string, List<Actor>>();
         public Cast(){}
 
-        public void AddActor(string group, Actor actors){
+        public void AddActor(string group, Actor actor){
 
             if (!actors.ContainsKey(group))
             {
@@ -18,32 +18,44 @@ namespace Game{
                 actors[group].Add(actor);
             }   
         }
-        public Actor getFiActor(string group){
-            
-            Actor result = null;
-            if (activators.ContainsKey(group)){
-                
-                if (actor.[group].Count > 0){
-                    result = actors[group][0];
-                }
+
+        public List<Actor> getActor(string group){
+
+            List<Actor> results = new List<Actor>();
+            if (actors.ContainsKey(group)){
+
+                results.AddRange(actors[group]);
             }
+            return results;
         }
 
-        public List<actor> GeAll(){
-            List<Actor> results = new List<Actor>;
-            foreach (List<Activator> resul in actors.Values){
-
-                results.AddRange(result);
+        public List<Actor> GeAll(){
+            List<Actor> results = new List<Actor>();
+            foreach (List<Actor> resul in actors.Values)
+            {
+                results.AddRange(results);
             }
             
             return results;
 
         }
 
+        public Actor getFiActor(string group)
+        {    
+            Actor result = null;
+            if (actors.ContainsKey(group))
+            {
+                if (actors[group].Count > 0)
+                {
+                    result = actors[group][0];
+                }
+            }
+        }
+
         public Actor GetFiact(string group){
 
             Actor result = null;
-            if (actors.ContainsKey(string group)){
+            if (actors.ContainsKey(group)){
                 if (actors[group].Count > 0 ){
                     result = actors[group][0];
                 }
@@ -52,7 +64,7 @@ namespace Game{
         }
 
         public void RemoveAct(string group, Actor actor){
-            if (actor.ContainsKey(group)){
+            if (actors.ContainsKey(group)){
                 actors[group].Remove(actor);
             }
         }
