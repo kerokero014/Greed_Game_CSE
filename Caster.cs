@@ -19,7 +19,7 @@ namespace Game{
             }   
         }
 
-        public List<Actor> getActor(string group){
+        public List<Actor> getActors(string group){
 
             List<Actor> results = new List<Actor>();
             if (actors.ContainsKey(group)){
@@ -40,23 +40,13 @@ namespace Game{
 
         }
 
-        public Actor getFiActor(string group)
-        {    
-            Actor result = null;
-            if (actors.ContainsKey(group))
-            {
-                if (actors[group].Count > 0)
-                {
-                    result = actors[group][0];
-                }
-            }
-        }
-
-        public Actor GetFiact(string group){
-
+        public Actor GetFiact(string group)
+        {
             Actor result = null;
             if (actors.ContainsKey(group)){
-                if (actors[group].Count > 0 ){
+
+                if (actors[group].Count > 0 )
+                {    
                     result = actors[group][0];
                 }
             }
