@@ -40,7 +40,7 @@ namespace Game{
 
         }
 
-        public Actor GetFiact(string group)
+        public Actor GetFiAct(string group)
         {
             Actor result = null;
 
