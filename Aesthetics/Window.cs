@@ -3,7 +3,7 @@ using Raylib_cs;
 using Game.Casting;
 
 
-namespace Game{
+namespace Game.Aesthetics{
 
     public class Window{
 
