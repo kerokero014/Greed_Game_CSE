@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Game{
+namespace Game.Casting{
     public class Cast{
         private Dictionary<string, List<Actor>> actors = new Dictionary<string, List<Actor>>();
         public Cast(){}

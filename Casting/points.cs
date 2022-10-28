@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Game
+namespace Game.Casting
 {
     public class Point{
         private int x = 0;

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Raylib_cs;
-using Game;
+using Game.Casting;
 
 
 namespace Game{
@@ -36,12 +36,75 @@ namespace Game{
             }
         }
 
+        public void DrawActr(Actor actor){
 
-        public void DrawActr(List<Actor>actors){
+            string text = actor.GetText();
+
+            int x = actor.GetPosition().GetX();
+
+            int y = actor.GetPosition().GetY();
+
+            int fontSize = actor.GetFontSize();
+
+            Casting.Color c = actor.GetColor();
+            Raylib_cs.Color color = ToRayLibColor(c);
+
+            Raylib.DrawText(text, x, y, fontSize, color);
+        }
+
+        public void DrawActrs(List<Actor>actors){
             foreach (Actor actor in actors){
                 DrawActr(actor);
             }
         }
+
+        public void flushBuffr(){
+            Raylib.EndDrawing();
+        }
+
+        public int getCellSize(){
+            return cellSize;
+        }
+
+        public int getHeight(){
+            return height;
+        }
+
+        public int getWidth(){
+            return width;
+        }
+
+        public bool isWindowOpen(){
+            return !Raylib.WindowShouldClose();
+        }
+
+        public void OpenWidnw(){
+            Raylib.InitWindow(width, height, caption);
+            Raylib.SetTargetFPS(frameRate);
+        }
+        
+        private void DrawGrid(){
+
+            for(int x = 0;  x < width; x += cellSize){
+                Raylib.DrawLine(x, 0, x, height, Raylib_cs.Color.GRAY);
+            }
+            for (int y = 0; y < height; y += cellSize){
+                Raylib.DrawLine(0, y, width, y, Raylib_cs.Color.GRAY); 
+            }
+        }
+
+        private Raylib_cs.Color ToRaylibColor(Casting.Color color){
+
+            int r = color.GetRed();
+            int g = color.GetGreen();
+            int b = color.GetBlue();
+            int a = color.GetAlpha();
+            return new Raylib_cs.Color(r,g,b,a);
+
+        }
+
+
+
 
 
 

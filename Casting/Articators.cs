@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 
-namespace Game{
+namespace Game.Casting{
 
     public class Artifact : Actor{
         private int score = 0;
