@@ -26,6 +26,10 @@ namespace Game.Casting{
             return position;
         }
 
+        public string GText(){
+            return text;
+        }
+
         public Point Gvelocity(){
             return velocity;
         }

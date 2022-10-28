@@ -38,13 +38,13 @@ namespace Game{
 
         public void DrawActr(Actor actor){
 
-            string text = actor.GetText();
+            string text = actor.GText();
 
-            int x = actor.GetPosition().GetX();
+            int x = actor.GPosition().GetX();
 
-            int y = actor.GetPosition().GetY();
+            int y = actor.GPosition().GetY();
 
-            int fontSize = actor.GetFontSize();
+            int fontSize = actor.GFontSize();
 
             Casting.Color c = actor.GetColor();
             Raylib_cs.Color color = ToRayLibColor(c);
@@ -82,7 +82,7 @@ namespace Game{
             Raylib.InitWindow(width, height, caption);
             Raylib.SetTargetFPS(frameRate);
         }
-        
+
         private void DrawGrid(){
 
             for(int x = 0;  x < width; x += cellSize){
