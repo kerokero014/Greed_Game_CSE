@@ -39,6 +39,8 @@ namespace Game.Casting{
 
             int x = ((position.GetX() + velocity.GetY()) + maxX) % maxX;
             int y = ((position.GetY() + velocity.GetY()) + maxY) % maxY;
+            
+            position = new Point(x,y);
         }
 
         public void setColor(Color color){

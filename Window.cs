@@ -47,7 +47,7 @@ namespace Game{
             int fontSize = actor.GFontSize();
 
             Casting.Color c = actor.GetColor();
-            Raylib_cs.Color color = ToRayLibColor(c);
+            Raylib_cs.Color color = ToRaylibColor(c);
 
             Raylib.DrawText(text, x, y, fontSize, color);
         }
