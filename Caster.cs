@@ -31,9 +31,9 @@ namespace Game{
 
         public List<Actor> GeAll(){
             List<Actor> results = new List<Actor>();
-            foreach (List<Actor> resul in actors.Values)
+            foreach (List<Actor> result in actors.Values)
             {
-                results.AddRange(results);
+                results.AddRange(result);
             }
             
             return results;
@@ -43,6 +43,7 @@ namespace Game{
         public Actor GetFiact(string group)
         {
             Actor result = null;
+
             if (actors.ContainsKey(group)){
 
                 if (actors[group].Count > 0 )
