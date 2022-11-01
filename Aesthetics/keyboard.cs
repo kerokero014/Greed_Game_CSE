@@ -27,6 +27,20 @@ namespace Game.Aesthetics{
                 dy = 1;
             }
 
+            Point direction = new Point(dx, dy);
+            direction = direction.Scale(cellSize);
+            
+            return direction;
+        }
+
+        public Point moveArtifact(){
+            int dx = 0;
+            int dy = 1;
+
+            Point direction = new Point(dx,dy);
+            direction = direction.Scale(cellSize);
+
+            return direction;
         }
 
     }
