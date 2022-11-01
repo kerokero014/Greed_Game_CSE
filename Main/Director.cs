@@ -11,7 +11,7 @@ namespace Game.Directing{
 
     public class Director{
         public int score = 0;
-        private KeyBoard keyBoard = null ;
+        private KeyBoard keyBoard = null;
         private Window window = null;
 
         public Director( KeyBoard keyBoard, Window window){
