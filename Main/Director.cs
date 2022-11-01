@@ -34,10 +34,10 @@ namespace Game.Directing{
             List<Actor> artifacts = cast.getActors("artifacts");
             foreach(Actor actor in artifacts){
                 Point artifactvelocity = keyBoard.moveArtifact();
-                Actor.Gvelocity(artifactvelocity);
+                actor.setVelocity(artifactvelocity);
                 int maxX = window.getWidth();
                 int maxY = window.getHeight();
-                Actor.NextMove(maxX, maxY);
+                actor.NextMove(maxX, maxY);
             }
             Actor robot = cast.GetFiAct("robot");
             Point velocity = keyBoard.getDirection();
