@@ -43,8 +43,6 @@ namespace Game.Directing{
             Point velocity = keyBoard.getDirection();
             robot.setVelocity(velocity);
         }
-
-
         private void DoUpdates(Cast cast){
 
             Actor banner = cast.GetFiAct("banner");
@@ -74,7 +72,6 @@ namespace Game.Directing{
                 }
             }
         }
-
         public void DoOutputs(Cast cast){
 
             List<Actor> actors = cast.GeAll();
@@ -83,5 +80,5 @@ namespace Game.Directing{
             window.flushBuffr();
         }
     }
-
+    
 }
