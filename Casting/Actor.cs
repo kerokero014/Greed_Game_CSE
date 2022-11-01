@@ -45,6 +45,7 @@ namespace Game.Casting{
 
         public void setColor(Color color){
             if (color == null){
+                
                 throw new ArgumentException("color can't be null");
             }
             this.color = color;

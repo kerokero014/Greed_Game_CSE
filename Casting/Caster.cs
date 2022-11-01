@@ -44,7 +44,8 @@ namespace Game.Casting{
         {
             Actor result = null;
 
-            if (actors.ContainsKey(group)){
+            if (actors.ContainsKey(group))
+            {
 
                 if (actors[group].Count > 0)
                 {    
