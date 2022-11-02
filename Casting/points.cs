@@ -18,7 +18,7 @@ namespace Game.Casting
             return new Point(x, y);
         }
 
-        public bool Results(Point other){
+        public bool Equals(Point other){
             return this.x == other.GetX() && this.y == other.GetY();
         }
 

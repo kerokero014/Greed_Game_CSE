@@ -19,14 +19,15 @@ namespace Game.Directing{
         }
 
         public void startGame(Cast cast){
-
+            
+            window.OpenWindow();
             while(window.isWindowOpen()){
                 
                 GetInputs(cast);
                 DoUpdates(cast);
                 DoOutputs(cast);
             }
-            window.closeWinw();
+            window.closeWindow();
         }
 
         private void GetInputs(Cast cast){

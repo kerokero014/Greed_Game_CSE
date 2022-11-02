@@ -24,7 +24,7 @@ namespace Game.Aesthetics{
             this.dbg = dbg; 
         }
 
-        public void closeWinw(){
+        public void closeWindow(){
             Raylib.CloseWindow();
         }
 
@@ -78,7 +78,7 @@ namespace Game.Aesthetics{
             return !Raylib.WindowShouldClose();
         }
 
-        public void OpenWidnw(){
+        public void OpenWindow(){
             Raylib.InitWindow(width, height, caption);
             Raylib.SetTargetFPS(frameRate);
         }
@@ -100,22 +100,6 @@ namespace Game.Aesthetics{
             int b = color.GetBlue();
             int a = color.GetAlpha();
             return new Raylib_cs.Color(r,g,b,a);
-
         }
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
 }

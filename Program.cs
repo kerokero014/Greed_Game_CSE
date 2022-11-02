@@ -13,7 +13,7 @@ using Game.Directing;
 
 
         private static int FRAME_RATE = 7;
-        private static int MAX_X = 980;
+        private static int MAX_X = 900;
         private static int MAX_Y = 600;
         private static int CELL_SIZE = 15;
         private static int FONT_SIZE = 15;
@@ -21,7 +21,7 @@ using Game.Directing;
         private static int ROWS = 40; 
         private static string CAPTION = "Greed";
         private static string DATA_PATH = "Data/messages.txt";
-        private static Color WHITE = new Color(255,255,255);
+        private static Color WHITE = new Color(255, 255, 255);
         private static int DEFAULT = 20;
 
         static void Main(string[] args){
@@ -32,11 +32,11 @@ using Game.Directing;
             banner.setText("");
             banner.setFontSize(FONT_SIZE);
             banner.setColor(WHITE);
-            banner.setPosition(new Point(CELL_SIZE,0));
+            banner.setPosition(new Point(CELL_SIZE, 0));
             cast.AddActor("banner", banner);
 
             Actor robot = new Actor();
-            robot.setText(" <^>");
+            robot.setText("#");
             robot.setFontSize(FONT_SIZE);
             robot.setColor(WHITE);
             robot.setPosition(new Point(MAX_X/2, MAX_Y - 30));
@@ -55,7 +55,7 @@ using Game.Directing;
                 int r = 1;
                 int g = 255;
                 int b = 1;
-                Color color = new Color(r,b,g);
+                Color color = new Color(r,g,b);
 
                 Artifact artifact = new Artifact();
                 artifact.setText(text);
