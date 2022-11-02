@@ -24,7 +24,7 @@ using Game.Directing;
         private static Color WHITE = new Color(255,255,255);
         private static int DEFAULT = 20;
 
-        static void main(string[] args){
+        static void Main(string[] args){
             
             Cast cast = new Cast();
 
