@@ -19,11 +19,11 @@ namespace Game.Aesthetics{
             int dx = 0;
             int dy = 0;
 
-            if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)){
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_A)){
                 dx = -1;
             }
 
-            if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)){
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_D)){
                 dy = 1;
             }
 
