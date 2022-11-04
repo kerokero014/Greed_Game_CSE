@@ -1,8 +1,10 @@
 using System; 
 
-namespace Game.Casting{
+namespace Game.Casting
+{
 
-    public class Actor{
+    public class Actor
+    {
 
 
         private string text = "";
