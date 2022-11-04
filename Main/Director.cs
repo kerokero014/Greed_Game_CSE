@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Game.Aesthetics;
+using Game.Services;
 using Game.Casting;
 using System;
 
@@ -10,10 +10,10 @@ namespace Game.Directing{
 
     public class Director{
         public int score = 0;
-        private KeyBoard keyboard = null;
-        private Window window = null;
+        private KeyBoardService keyboard = null;
+        private WindowService window = null;
 
-        public Director( KeyBoard keyboard, Window window){
+        public Director( KeyBoardService keyboard, WindowService window){
             this.keyboard = keyboard;
             this.window = window;
         }

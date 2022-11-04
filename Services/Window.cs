@@ -4,9 +4,9 @@ using Raylib_cs;
 
 
 
-namespace Game.Aesthetics{
+namespace Game.Services{
 
-    public class Window{
+    public class WindowService{
 
         private int cellSize = 15;
         private string caption = "";
@@ -16,7 +16,7 @@ namespace Game.Aesthetics{
         private bool dbg = false; 
 
 
-        public Window(string caption, int width, int height, int cellSize, int frameRate, bool dbg){
+        public WindowService(string caption, int width, int height, int cellSize, int frameRate, bool dbg){
             this.caption = caption; 
             this.width = width;
             this.height = height; 
@@ -34,7 +34,8 @@ namespace Game.Aesthetics{
         {
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Raylib_cs.Color.BLACK);
-            if (dbg){
+            if (dbg)
+            {
                 DrawGrid();
             }
         }

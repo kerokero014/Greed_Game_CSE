@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Game.Casting;
-using Game.Aesthetics;
+using Game.Services;
 using Game.Directing;
 
 
  namespace Game{
 
     class program{
-
-
         private static int FRAME_RATE = 7;
         private static int MAX_X = 900;
         private static int MAX_Y = 600;
@@ -43,7 +41,8 @@ using Game.Directing;
             cast.AddActor("robot", robot);
 
             Random random = new Random();
-            for (int i =0; i < DEFAULT; i++){
+            for (int i =0; i < DEFAULT; i++)
+            {
 
                 string text = ((char)(42)).ToString();
 
@@ -86,11 +85,10 @@ using Game.Directing;
                 cast.AddActor("artifacts", artifact);
             }
 
-                KeyBoard keyboard = new KeyBoard(CELL_SIZE);
-                Window window = new Window(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, false);
+                KeyBoardService keyboard = new KeyBoardService(CELL_SIZE);
+                WindowService window = new WindowService(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, false);
                 Director director = new Director(keyboard, window);
                 director.startGame(cast);
-            }
         }
-
     }
+}

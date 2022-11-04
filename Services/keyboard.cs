@@ -3,13 +3,13 @@ using Game.Casting;
 
 
 
-namespace Game.Aesthetics{
+namespace Game.Services{
 
-    public class KeyBoard{
+    public class KeyBoardService{
         private int cellSize = 15;
 
 
-        public KeyBoard(int cellSize){
+        public KeyBoardService(int cellSize){
             
             this.cellSize = cellSize;
         }
@@ -47,7 +47,4 @@ namespace Game.Aesthetics{
         }
 
     }
-
-
-
 }

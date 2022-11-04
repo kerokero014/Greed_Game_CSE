@@ -16,8 +16,6 @@ namespace Game.Casting{
         public void SetScore(int score){
             this.score = score;
         }
-
-
     }
 }
 
