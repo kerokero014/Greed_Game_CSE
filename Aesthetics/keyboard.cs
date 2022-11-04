@@ -10,6 +10,7 @@ namespace Game.Aesthetics{
 
 
         public KeyBoard(int cellSize){
+            
             this.cellSize = cellSize;
         }
 
@@ -19,12 +20,14 @@ namespace Game.Aesthetics{
             int dx = 0;
             int dy = 0;
 
-            if ( Raylib.IsKeyDown(KeyboardKey.KEY_LEFT)){
+            if ( Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
+            {
                 dx = -1;
             }
 
-            if ( Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT)){
-                dy = 1;
+            if ( Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
+            {
+                dx = 1;
             }
 
             Point direction = new Point(dx, dy);
