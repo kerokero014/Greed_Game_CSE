@@ -28,7 +28,8 @@ namespace Game.Aesthetics{
             Raylib.CloseWindow();
         }
 
-        public void ClBffr(){
+        public void ClBffr()
+        {
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Raylib_cs.Color.BLACK);
             if (dbg){
