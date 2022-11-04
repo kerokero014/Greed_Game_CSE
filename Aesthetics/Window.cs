@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using Raylib_cs;
 using Game.Casting;
+using Raylib_cs;
+
 
 
 namespace Game.Aesthetics{
@@ -25,6 +26,7 @@ namespace Game.Aesthetics{
         }
 
         public void closeWindow(){
+
             Raylib.CloseWindow();
         }
 
