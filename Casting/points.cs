@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-
 namespace Game.Casting
 {
-    public class Point{
+    public class Point
+    {
         private int x = 0;
         private int y = 0;
         public Point(int x, int y){

@@ -7,7 +7,7 @@ using Game.Aesthetics;
 using Game.Directing;
 
 
- namespace Game.Greed{
+ namespace Game{
 
     class program{
 

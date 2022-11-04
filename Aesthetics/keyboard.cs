@@ -25,7 +25,7 @@ namespace Game.Aesthetics{
                 dx = -1;
             }
 
-            if ( Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
             {
                 dx = 1;
             }
