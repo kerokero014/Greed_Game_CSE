@@ -11,7 +11,7 @@ namespace Game.Casting
             this.y = y;
         }
 
-        public Point Sum(Point other){
+        public Point Add(Point other){
             int x = this.x + other.GetX();
             int y = this.y + other.GetY();
 

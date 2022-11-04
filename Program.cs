@@ -90,9 +90,9 @@ using Game.Directing;
                     cast.AddActor("artifacts", artifact);
                 }
 
-                KeyBoard keyBoard = new KeyBoard(CELL_SIZE);
+                KeyBoard keyboard = new KeyBoard(CELL_SIZE);
                 Window window = new Window(CAPTION, MAX_X, MAX_Y, CELL_SIZE, FRAME_RATE, false);
-                Director director = new Director(keyBoard, window);
+                Director director = new Director(keyboard, window);
                 director.startGame(cast);
             }
         }

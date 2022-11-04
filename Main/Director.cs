@@ -10,11 +10,11 @@ namespace Game.Directing{
 
     public class Director{
         public int score = 0;
-        private KeyBoard keyBoard = null;
+        private KeyBoard keyboard = null;
         private Window window = null;
 
-        public Director( KeyBoard keyBoard, Window window){
-            this.keyBoard = keyBoard;
+        public Director( KeyBoard keyboard, Window window){
+            this.keyboard = keyboard;
             this.window = window;
         }
 
@@ -33,14 +33,14 @@ namespace Game.Directing{
         private void GetInputs(Cast cast){
             List<Actor> artifacts = cast.getActors("artifacts");
             foreach(Actor actor in artifacts){
-                Point artifactvelocity = keyBoard.moveArtifact();
+                Point artifactvelocity = keyboard.moveArtifact();
                 actor.setVelocity(artifactvelocity);
                 int maxX = window.getWidth();
                 int maxY = window.getHeight();
                 actor.NextMove(maxX, maxY);
             }
             Actor robot = cast.GetFiAct("robot");
-            Point velocity = keyBoard.getDirection();
+            Point velocity = keyboard.getDirection();
             robot.setVelocity(velocity);
         }
         private void DoUpdates(Cast cast){
@@ -56,7 +56,8 @@ namespace Game.Directing{
             robot.NextMove(maxX, maxY);
 
             Random random = new Random();
-            foreach (Actor actor in artifacts){
+            foreach (Actor actor in artifacts)
+            {
                 if (robot.GPosition().Equals(actor.GPosition())){
                     
                     Artifact artifact = (Artifact) actor;

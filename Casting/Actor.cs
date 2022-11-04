@@ -75,7 +75,7 @@ namespace Game.Casting{
         }
         public void setVelocity(Point velocity){
 
-            if(velocity == null){
+            if (velocity == null){
                 throw new ArgumentException("velocity can not be null");
             }
             this.velocity = velocity;
